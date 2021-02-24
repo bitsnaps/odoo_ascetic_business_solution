@@ -1,0 +1,2 @@
+# odoo_ascetic_business_solution
+Ascetic Business Solution
