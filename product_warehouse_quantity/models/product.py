@@ -37,7 +37,7 @@ class ProductTemplate(models.Model):
                     if quant.location_id:
                         if quant.location_id not in t_warehouses:
                             t_warehouses.update({quant.location_id:0})
-                        t_warehouses[quant.location_id] += quant.qty
+                        t_warehouses[quant.location_id] += quant.quantity
 
                 tt_warehouses = {}
                 for location in t_warehouses:

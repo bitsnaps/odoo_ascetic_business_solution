@@ -1,101 +1,88 @@
-<html>
-<body>
-<section class="oe_container oe_dark">
-    <div class="oe_row">
-        <div class="oe_row">
-            <h2 class="oe_slogan oe_span10">Available product's quantity per warehouse</h2>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Available product's quantity per warehouse</h2>
+        <p class="oe_mt32">
+                &ensp;&ensp;* To empower the user by providing the decision making knowledge is one of the key areas to focus while implementing ERP.  <br/>
+                &ensp;&ensp;* An effort towards providing analysed information mining through the already existed data. <br/>
+                &ensp;&ensp;* Here is the Odoo module for multi warehouse implementation. <br/>
+                &ensp;&ensp;* This module helps to calculate and show real time total quantity of the product available in each of the warehouse.<br/>
+                &ensp;&ensp;* The total cumulative quantity will be calculated considering not only stock location of the warehousem but also all the sub locations of each of the stock location of all warehouses.
+        </p>
+    </div>
+</section>
+
+<section class="oe_container oe_dark" >
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Warehouse structure</h2>
+        <div class="oe_span6">
+            <div class="oe_demo oe_picture oe_screenshot">
+                <img src="Warehouse_structure.png">
+            </div>
         </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                To empower the user by providing the decision making knowledge is one of the key areas <br/>
-                to focus while implementing ERP.
-            </p>
-
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                An effort towards providing analysed information mining through the already existed data.
-            </p>
-
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                Here is the Odoo module for multi warehouse implementation.
-            </p>
-
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                This module helps to calculate and show real time total quantity of the product available <br/>
-                in each of the warehouse.
-            </p>
-
-
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                The total cumulative quantity will be calculated considering not only stock location of the warehouse <br/>
-                but also all the sub locations of each of the stock location of all warehouses.
+        <div class="oe_span6">
+            <p class="oe_mt32">
+As an example, in the multi warehouse structure, each of the warehouse has one stock location. That stock location of the warehouse may have various child location.
             </p>
         </div>
     </div>
 </section>
-
-<section class='oe_container oe_dark'>
-    <div class='oe_row'>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                 As an example, in the multi warehouse structure, each of the warehouse has one stock location.
+<section class="oe_container">
+    <div class="oe_row">
+        <h2 class="oe_slogan">Products in various locations</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                 As an example, the different number of quantity of 'Apple In-Ear Headphones' product is there in such locations as shown here.
             </p>
         </div>
-        <div class="col-md-12">
-            <img class="oe_picture oe_screenshot" src="Warehouse_structure.png" width="80%"/>
+        <div class="oe_span6">
+            <div class="oe_demo oe_screenshot">
+                <img src="quentity_per_location.png">
+            </div>
         </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                <br/>
-                <br/>
-                 That stock location of the warehouse may have various child location.
-            </p>
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                 As an example, the different number of quantity of 'iPan Mini' product is there in such locations as shown below:
-            </p>
-        </div>
-        <div class="col-md-12">
-            <img class="oe_picture oe_screenshot" src="quentity_per_location.png" width="80%"/>
-        </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                <br/>
-                <br/>
-                  Product Form View:
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Product Form View</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                 The total quantity of the product with corresponding warehouses information are displayed in the Product Form view.
             </p>
         </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                 The total quantity of the product with corresponding warehouses information are displayed as below:
+        <div class="oe_span6">
+            <div class="oe_demo oe_screenshot">
+                <img src="product_form_view.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container">
+    <div class="oe_row">
+        <h2 class="oe_slogan">Product Kanban View</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                 The total quantity of the product with corresponding warehouses information are displayed in the Product Kanban view.
             </p>
         </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                  The field 'Quantity per warehouse' is displayed such information in the product Form View:
+        <div class="oe_span6">
+            <div class="oe_demo oe_screenshot">
+                <img src="product_kanban_view.png">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan">Access Control</h2>
+        <div class="oe_span6">
+            <p class="oe_mt32">
+                Assign 'Show product quantity per warehouse' group to the user to which you want them to show number of available quantity of the product per warehouse.
             </p>
         </div>
-        <div class="col-md-12">
-            <img class="oe_picture oe_screenshot" src="product_form_view.png" width="80%"/>
-        </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                <br/>
-                <br/>
-                  Product Kanban View:
-            </p>
-        </div>
-        <div class="col-md-12">
-            <img class="oe_picture oe_screenshot" src="product_kanban_view.png" width="80%"/>
-        </div>
-        <div style="margin: 16px 8%;">
-            <p class='oe_mt32 text-justify' style="font-size: 15px;">
-                <br/>
-                <br/>
-                Assign 'Show product quantity per warehouse' group to the user to which you want them to show <br/>
-                number of available quantity of the product per warehouse.
-            </p>
-        </div>
-        <div class="col-md-12">
-            <img class="oe_picture oe_screenshot" src="user_access.png" width="80%"/>
+        <div class="oe_span6">
+            <div class="oe_demo oe_screenshot">
+                <img src="user_access.png">
+            </div>
         </div>
     </div>
 </section>

@@ -28,7 +28,7 @@
     'website': 'http://www.asceticbs.com',
     'description': """
 """,
-    'version': '10.0.1.0.0',
+    'version': '11.0',
     'depends': ['sale','stock'],
     'data': ['security/warehouse_security.xml','views/product_view.xml'],
     'images': ['static/description/banner.png'],

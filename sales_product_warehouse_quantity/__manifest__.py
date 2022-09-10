@@ -2,7 +2,7 @@
 #################################################################################
 #
 #    Odoo, Open Source Management Solution
-#    Copyright (C) 2017 Ascetic Business Solution <www.asceticbs.com>
+#    Copyright (C) 2018 Ascetic Business Solution <www.asceticbs.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -28,7 +28,7 @@
     'website': 'http://www.asceticbs.com',
     'description': """
 """,
-    'version': '10.0.1.0.0',
+    'version': '11.0.1.0.0',
     'depends': ['sale','stock'],
     'data': ['wizard/product_warehouse_quantity.xml','views/sale_view.xml'],
     'images': ['static/description/banner.png'],

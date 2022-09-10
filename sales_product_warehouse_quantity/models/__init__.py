@@ -2,7 +2,7 @@
 #################################################################################
 #
 #    Odoo, Open Source Management Solution
-#    Copyright (C) 2017 B-informed Asia <info@B-informed.id>
+#    Copyright (C) 2018 B-informed Asia <info@B-informed.id>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,5 +19,5 @@
 #
 #################################################################################
 
-import sale_order
+from . import sale_order
 

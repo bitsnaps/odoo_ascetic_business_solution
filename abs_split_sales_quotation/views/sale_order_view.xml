@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_checkbox_button_form" model="ir.ui.view"> 
+        <field name="name">sale.order.form</field>
+	<field name="model">sale.order</field>
+	<field name="inherit_id" ref="sale.view_order_form"/>
+	<field name="arch" type="xml">
+	     <xpath expr ="//field[@name='order_line']//tree/field[@name='price_total']" position="before"> 
+                <field name="split" attrs="{'invisible':[('state', 'in', ['sale','done','cancel'])]}" groups="sale.group_show_checkbox_button"/> 
+	     </xpath>
+	     <xpath expr ="//button[@name='action_cancel']" position="after">
+       		  <button string="Split Quotation" name="btn_split_quotation" type="object" attrs="{'invisible':[('state', 'in', ['sale','done','cancel'])]}" groups="sale.group_show_checkbox_button"/>
+            </xpath>
+       </field>		
+    </record>
+</odoo>
+	
+
+

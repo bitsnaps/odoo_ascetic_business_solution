@@ -2,7 +2,7 @@
 #################################################################################
 #
 #    Odoo, Open Source Management Solution
-#    Copyright (C) 2017 Ascetic Business Solution <www.asceticbs.com>
+#    Copyright (C) 2018 Ascetic Business Solution <www.asceticbs.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -31,25 +31,24 @@ class SaleOrderLine(models.Model):
 
     warehouse_quantity = fields.Char('Stock Quantity per Warehouse')
 
-    @api.multi
     @api.onchange('product_id')
     def product_id_change(self):
+        super(SaleOrderLine, self).product_id_change()
         result = {}
-        if not self.product_id:
-            return result 
-        result = super(SaleOrderLine, self).product_id_change()
-        result['warehouse_quantity'] = self._write_warehouse_quantity()
-        return result
+        for record in self:
+            warehouse = self._write_warehouse_quantity()
+            if warehouse:
+                record.warehouse_quantity = warehouse
 
     def _write_warehouse_quantity(self):
         warehouse_quantity_text = ''
-        quant_ids = self.env['stock.quant'].sudo().search([('product_id','=',self.product_id.id),('reservation_id','=',None),('location_id.usage','=','internal')])
+        quant_ids = self.env['stock.quant'].sudo().search([('product_id','=',self.product_id.id),('location_id.usage','=','internal')])
         t_warehouses = {}
         for quant in quant_ids:
             if quant.location_id:
                 if quant.location_id not in t_warehouses:
                     t_warehouses.update({quant.location_id:0})
-                t_warehouses[quant.location_id] += quant.qty
+                t_warehouses[quant.location_id] += quant.quantity
 
         tt_warehouses = {}
         for location in t_warehouses:
@@ -70,5 +69,5 @@ class SaleOrderLine(models.Model):
         for item in tt_warehouses:
             if tt_warehouses[item] != 0:
                 warehouse_quantity_text = warehouse_quantity_text + ' ** ' + item + ': ' + str(tt_warehouses[item])
-        self.warehouse_quantity = warehouse_quantity_text
+        return warehouse_quantity_text
 
