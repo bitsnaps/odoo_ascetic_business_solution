@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <!--Access right for the Employee Working Hours-->
+      <record id="hr.group_total_working_hours_show" model="res.groups">
+          <field name="name">Show Employee Working Hours</field> 
+	  <field name="category_id" ref="base.module_category_extra"/>
+     </record>
+
+</odoo>

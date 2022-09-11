@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Extended the functionality of the employee kanban view to add the fields working_week, working_month  -->
+    <record id="view_employee_total_working_hours_kanban" model="ir.ui.view">
+        <field name="name">hr.employee.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref='hr.hr_kanban_view_employees'/>
+        <field name="arch" type="xml">
+             <xpath expr="//div[@class='oe_kanban_details']" position="inside">
+                <t t-if="record.working_week.raw_value">
+                    <strong groups="hr.group_total_working_hours_show">This Week Hours: </strong>
+                       <field name="working_week" groups="hr.group_total_working_hours_show"/>
+                </t>
+                <br/>
+                <t t-if="record.working_week.raw_value">
+                    <strong groups="hr.group_total_working_hours_show">This Month Hours: </strong>
+                        <field name="working_month" groups="hr.group_total_working_hours_show"/>
+                </t>
+              </xpath>
+        </field>
+    </record> 
+
+</odoo>
+
